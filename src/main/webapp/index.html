@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Página de início</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Recurso Mensagem JAX-RS REST</h1>    
+        
+        <h2>Serviço getMensagem</h2>    
+        
+        URL: <a href="rest/mensagem">rest/mensagem</a><br><br>
+        Comando: <code>curl http://localhost:8080/webservice_mensagem_jaxrs_rest/rest/mensagem</code><br>
+        
+        <h2>Serviço setMensagem(string)</h2>    
+        Formulário HTML: <a href="setmensagem.html">setmensagem</a><br><br>
+        Comando: <code>curl -v -X POST -H "Content-Type: application/json" -d "{\"mensagem\":\"Nova Mensagem\"}" http://localhost:8080/webservice_mensagem_jaxrs_rest/rest/mensagem</code>
+    </body>
+</html>
