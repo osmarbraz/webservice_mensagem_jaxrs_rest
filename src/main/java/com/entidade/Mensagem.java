@@ -1,9 +1,12 @@
 package com.entidade;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author osmar
  */
+@XmlRootElement
 public class Mensagem {
 
     private String mensagem;

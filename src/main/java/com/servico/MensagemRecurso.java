@@ -21,24 +21,44 @@ public class MensagemRecurso {
     private final Mensagem mensagem = Mensagem.getInstancia();
     
     /**
+     * Gera saída em JSON da mensagem.
+     * 
+     * Teste com o comando no console:
      * curl http://localhost:8080/webservice_mensagem_jaxrs_rest/rest/mensagem
+     * 
+     * @return 
+     */
+    @GET    
+    @Produces(MediaType.APPLICATION_JSON)    
+    public Response getRecursoMensagemJSON() {        
+        System.out.println("Executando serviço getRecursoMensagem JSON.");
+        //Mensagem de retorno
+        return Response.ok(mensagem).build();
+    }
+    
+    /**
+     * Gera saída em XML da mensagem.
+     * 
+     * Teste com o comando no console:
+     * curl http://localhost:8080/webservice_mensagem_jaxrs_rest/rest/mensagem/xml
+     * 
      * @return 
      */
     @GET
-    @Produces(MediaType.APPLICATION_JSON)    
-    public Response getRecursoMensagem() {        
-        System.out.println("Executando serviço getRecursoMensagem.");
+    @Path("xml")    
+    @Produces(MediaType.APPLICATION_XML)    
+    public Response getRecursoMensagemXML() {        
+        System.out.println("Executando serviço getRecursoMensagem XML.");
         //Mensagem de retorno
-        return Response.ok(mensagem, MediaType.APPLICATION_JSON).build();
+        return Response.ok(mensagem).build();
     }
 
     /**
      * Modifica a mensagem através de JSON.
      * 
-     * Comando para executar no console:
+     * Teste com o comando no console:
      * curl -v -X POST -H "Content-Type: application/json" -d "{\"mensagem\":\"Nova Mensagem\"}" http://localhost:8080/webservice_mensagem_jaxrs_rest/rest/mensagem
-     * 
-     * 
+     *  
      * @param mensagem 
      * @return  
      */
