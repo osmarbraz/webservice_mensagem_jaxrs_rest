@@ -5,7 +5,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <h1>setMensagem</h1>        
+        <h1>setMensagem</h1>
+
+        Comando: <code>curl -X POST http://localhost:8080/webservice_mensagem_jaxrs_rest/rest/mensagem -H "Content-Type: application/x-www-form-urlencoded" -d "mensagem=Nova Mensagem" </code><br><br>
         <form action="rest/mensagem" method="post">
             <label for="mensagem">Mensagem:</label>
             <input type="text" id="mensagem" name="mensagem"><br>

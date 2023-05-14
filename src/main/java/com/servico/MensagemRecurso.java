@@ -74,6 +74,9 @@ public class MensagemRecurso {
     /**     
      * Modifica a mensagem através de formulário HTML.
      * 
+     * Teste com o comando no console:
+     * curl -X POST http://localhost:8080/webservice_mensagem_jaxrs_rest/rest/mensagem -H "Content-Type: application/x-www-form-urlencoded" -d "mensagem=Nova Mensagem" 
+     * 
      * @param formParams     
      * @return      
      */
